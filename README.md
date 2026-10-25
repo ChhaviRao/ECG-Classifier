@@ -34,24 +34,26 @@ The pipeline uses 226 engineered features derived from ECG waveforms and heartbe
 
 The project uses the MIT-BIH Arrhythmia Database. Please follow the dataset provider's access conditions and citation requirements.
 
-## Evaluation
+## Model Performance
 
-The original experiment reported:
+The selected model is a voting ensemble combining SVM, XGBoost, and AdaBoost.
 
-- Test accuracy: **86.32%**
-- Test balanced accuracy: **56.87%**
-- Test macro-F1 score: **0.5161**
-
-Accuracy alone does not reflect performance equally across all classes, particularly because the dataset is imbalanced.
-
-## Technologies
-
-Python, NumPy, Pandas, SciPy, scikit-learn, XGBoost, WFDB, and Jupyter Notebook.
+| Metric | Result |
+|---|---:|
+| Test Accuracy | 86.32% |
+| Balanced Accuracy | 56.87% |
+| Macro F1-Score | 51.61% |
 
 ## Limitations
 
-This project is an educational and research prototype. It is not a clinically validated system and must not be used to diagnose heart conditions or make medical decisions.
+The dataset has an imbalanced class distribution, which affects performance across heartbeat categories. This project is an educational machine learning prototype and is **not intended for clinical diagnosis**.
 
+## Future Improvements
+
+- Improve minority-class detection.
+- Add explainable AI (XAI) using SHAP.
+- Develop an interactive web interface for predictions.
+- Evaluate the model with additional validation techniques.
 ## Future Improvements
 
 - Improve recognition of minority heartbeat classes.
